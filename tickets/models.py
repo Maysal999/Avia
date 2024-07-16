@@ -6,7 +6,12 @@ class City(models.Model):
     city = models.CharField(max_length=30)
     def __str__(self) -> str:
         return self.city
-    
+
+class Cit1(models.Model):
+    city = models.CharField(max_length=30)
+    def __str__(self) -> str:
+        return self.city
+
 class Bag(models.Model):
     bag = models.CharField(max_length=3)
     def __str__(self) -> str:
@@ -24,7 +29,8 @@ class Plane(models.Model):
     
 class Ticket(models.Model):
     flight_nomer = models.CharField(max_length=60)
-    city = models.ForeignKey(City,on_delete=models.CASCADE)
+    city_flight = models.ForeignKey(City,on_delete=models.CASCADE)
+    city_arrived = models.ForeignKey(Cit1,on_delete=models.CASCADE)
     bag = models.ForeignKey(Bag,on_delete=models.CASCADE)
     aeroport = models.ForeignKey(Aeroport,on_delete=models.CASCADE)
     plane = models.ForeignKey(Plane,on_delete=models.CASCADE)

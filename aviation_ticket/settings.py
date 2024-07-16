@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'rest_framework',
     #MyApps
     'tickets',
+    'user'
 ]
 
 MIDDLEWARE = [
@@ -104,6 +105,12 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.AllowAny',
+    ]
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/

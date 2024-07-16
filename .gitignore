@@ -2,3 +2,4 @@ test.txt
 test.py
 venv
 __pycache__
+*.sqlite3

@@ -1,7 +1,6 @@
 from django.contrib import admin
 
 from .models import (
-    Bag,
     Plane,
    
     City,
@@ -15,12 +14,7 @@ from .models import (
 # Register your models here.
 #бул жерде админ-панел болот
 
-@admin.register(Bag)
-class BagAdmin(admin.ModelAdmin):
-    '''Admin View for Bag'''
 
-    list_display = ('bag',)
-    
 
 @admin.register(Plane)
 class PlaneAdmin(admin.ModelAdmin):
@@ -58,4 +52,4 @@ class TicketAdmin(admin.ModelAdmin):
     '''Admin View for Bag'''
 
     list_display = ('flight_nomer','city_flight','city_arrived','bag','aeroport',
-                    'plane','flight_date','arrived_date','price','reassingment')
+                    'plane','departure_date','arrived_date','price','reassingment')
